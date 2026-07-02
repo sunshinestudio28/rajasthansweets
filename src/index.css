@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Outfit", sans-serif;
+  
+  --color-cream-50: #FFFDF5; /* Soft, warm premium cream background */
+  --color-cream-100: #FFFDF5; /* Matching background block */
+  --color-cream-200: #E8E1D5; /* Clean minimalist divider */
+  --color-cream-300: #D8CEBE; /* Subtle highlight border */
+  
+  --color-accent-red: #9B1C31; /* Premium rich royal Crimson Red */
+  --color-accent-pink: #D23669; /* Elegant Rose Pink */
+  --color-accent-gold: #CBA135; /* Rajasthani royal Gold */
+  --color-charcoal: #3D2B1F; /* Warm charcoal-brown for text */
+  --color-muted-brown: #6B5A4E; /* Soft brown description text */
+  --color-rose-light: #FDE7EC; /* Elegant light pink background */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-cream-50);
+    color: var(--color-charcoal);
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Custom smooth, elegant scrollbar matching the theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-cream-200);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-pink);
+}
+
+/* Custom selection highlight */
+::selection {
+  background-color: var(--color-accent-pink);
+  color: white;
+}
